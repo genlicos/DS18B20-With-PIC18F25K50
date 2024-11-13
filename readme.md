@@ -28,8 +28,8 @@ Este projeto implementa a leitura de dois sensores de temperatura DS18B20 utiliz
 
 ### Pinagem do PIC18F25K50:
 - RA0 (OneWire) -> DQ
-- RB0 (SDA) -> SDA do RTC e LCD
-- RB1 (SCL) -> SCL do RTC e LCD
+- RB0 (SDA) -> SDA LCD
+- RB1 (SCL) -> SCL LCD
 - VDD -> 5V
 - VSS -> GND
 
@@ -74,10 +74,10 @@ DS18B20-With-PIC18F25K50/
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/genlicos/RTC-DS18B20-With-PIC18F25K50.git
+git clone https://github.com/genlicos/DS18B20-With-PIC18F25K50.git
 ```
 
-2. Abra o arquivo `src/RTC_DS18B20_With_PIC18F25K50.mcppi` no mikroC PRO for PIC v7.6
+2. Abra o arquivo `src/DS18B20_With_PIC18F25K50.mcppi` no mikroC PRO for PIC v7.6
 
 3. Compile o projeto:
    - Faça as devidas modificações de sua preferência
@@ -90,7 +90,7 @@ git clone https://github.com/genlicos/RTC-DS18B20-With-PIC18F25K50.git
 
 ## 📄 Configuração Inicial
 
-O código já vem com uma configuração inicial de data e hora que pode ser modificada alterando os valores no arquivo `src/RTC_DS1307_With_PIC18F25K50.c`:
+O código já vem com uma configuração inicial de data e hora que pode ser modificada alterando os valores no arquivo `src/DS18B20_With_PIC18F25K50.c`:
 
 A resolução dos sensores pode ser configurada através da constante `RESOLUCAO`  alterando os valores no arquivo `src/ds18b20.h`::
 
@@ -106,7 +106,6 @@ A resolução dos sensores pode ser configurada através da constante `RESOLUCAO
 1. **Comunicação I2C**
    - Velocidade de comunicação: 100kHz
    - Pull-up resistor: 4.7kΩ
-   - Endereço do RTC: 0xD0
    - Endereço do LCD: 0x4E
 
 2. **Display LCD**
